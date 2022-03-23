@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "fir-test-1392f"
-  }
+    "default": "fir-test-1392f",
+    "staging": "fir-test-1392f",
+    "prod": "fir-test-1392f"
+  },
+  "targets": {}
 }
