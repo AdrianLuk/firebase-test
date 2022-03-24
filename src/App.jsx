@@ -1,29 +1,13 @@
 import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAnalytics, logEvent } from 'firebase/analytics';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: 'AIzaSyACxPIuAevcoRf7R067pPua2nKxlcyouIM',
-  authDomain: 'fir-test-1392f.firebaseapp.com',
-  projectId: 'fir-test-1392f',
-  storageBucket: 'fir-test-1392f.appspot.com',
-  messagingSenderId: '487829068402',
-  appId: '1:487829068402:web:5eea3ff53e7984bd52c0eb',
-  measurementId: 'G-22YK339VT9',
-};
+import { logEvent } from 'firebase/analytics';
+import { analytics } from './firebaseConfig';
+import Form from './Form';
 
 function App() {
   const [count, setCount] = useState(0);
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   useEffect(() => {
     logEvent(analytics, 'page_view');
   }, []);
@@ -38,6 +22,7 @@ function App() {
             count is: {count}
           </button>
         </p>
+        <Form />
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
