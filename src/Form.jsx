@@ -12,7 +12,8 @@ const Form = () => {
       const doc = await addDoc(collection(db, 'users'), {
         first: firstName,
         last: lastName,
-        born,
+        born: parseInt(born),
+        createdAt: Date.now(),
       });
       console.log('Document written with ID: ', doc.id);
       setFirstName('');

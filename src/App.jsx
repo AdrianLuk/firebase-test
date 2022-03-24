@@ -4,6 +4,7 @@ import './App.css';
 import { logEvent } from 'firebase/analytics';
 import { analytics } from './firebaseConfig';
 import Form from './Form';
+import Table from './Table';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
           </button>
         </p>
         <Form />
+        <Table />
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
