@@ -18,4 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FIR_TEST_1392F }}'
           channelId: live
           projectId: fir-test-1392f
-          target: prod
+          # target: prod
