@@ -19,13 +19,11 @@ const firebaseConfig = {
   measurementId: 'G-22YK339VT9',
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
 function App() {
   const [count, setCount] = useState(0);
-
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
   return (
     <div className='App'>
       <header className='App-header'>
