@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .firebase/
+
+# dotenv environment variable files
+.env*
